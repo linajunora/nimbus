@@ -1,0 +1,34 @@
+.btn {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: 12px 25px;
+  border-radius: 20px;
+  border: none;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+
+.btn-primary {
+  background-color: var(--periwinkle500);
+  color: var(--whiteish500);
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: var(--periwinkle600);
+  }
+  &:active {
+    background-color: var(--periwinkle700);
+    transform: scale(0.98);
+  }
+}
+
+.btn-secondary {
+  background-color: var(--rose500);
+  color: var(--blackish500);
+}
+
+.btn-default-blue {
+  border: 1.45px solid var(--periwinkle500);
+  color: var(--periwinkle500);
+  background-color: var(--whiteish500);
+}

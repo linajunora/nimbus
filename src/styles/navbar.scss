@@ -1,0 +1,50 @@
+.navbar {
+  width: 100%;
+  padding: 10px 70px;
+  display: flex;
+  justify-content: space-between;
+  //   border-bottom: 1px solid var(--perigray400);
+  background-color: var(--whiteish500);
+  .avatar-div {
+    display: flex;
+    gap: 20px;
+
+    .nimbus-h1 {
+      font-family: var(--font-nimbus-heading);
+      color: var(--periwinkle600);
+      letter-spacing: 3px;
+      font-weight: 200;
+      font-size: 2rem;
+    }
+    .cloud-svg {
+      width: 2.3rem;
+    }
+  }
+  .link-div {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    font-family: var(--font-body);
+
+    a {
+      line-height: 24px;
+      text-decoration: none;
+      color: var(--blackish400);
+      font-size: 1.2rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      transition: color 0.3s ease-in-out;
+
+      &:hover {
+        color: var(--blackish300);
+      }
+      &.active {
+        // border-bottom: 2px solid var(--blackish400);
+        color: var(--periwinkle600);
+      }
+    }
+    button {
+      font-family: var(--font-body);
+    }
+  }
+}
