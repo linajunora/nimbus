@@ -18,7 +18,7 @@ const Navbar = () => {
         <NavLink to="/how">How</NavLink>
         <NavLink to="/about">About</NavLink>
 
-        <Button onClick={handleLogin} variant="primary">
+        <Button className="login-btn" onClick={handleLogin} variant="primary">
           Login
         </Button>
       </div>

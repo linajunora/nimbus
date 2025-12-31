@@ -1,10 +1,17 @@
+@use "./mixins" as *;
+
 .navbar {
   width: 100%;
-  padding: 10px 70px;
+  padding: 10px 7rem;
   display: flex;
   justify-content: space-between;
   //   border-bottom: 1px solid var(--perigray400);
   background-color: var(--whiteish500);
+
+  @include tablet {
+    padding: 10px 4rem;
+  }
+
   .avatar-div {
     display: flex;
     gap: 20px;
@@ -30,7 +37,7 @@
       line-height: 24px;
       text-decoration: none;
       color: var(--blackish400);
-      font-size: 1.2rem;
+      font-size: 1rem;
       font-weight: 600;
       letter-spacing: 1px;
       transition: color 0.3s ease-in-out;

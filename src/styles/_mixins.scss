@@ -1,0 +1,16 @@
+@use "variables" as *;
+
+$mobile-width: 768px;
+$tablet-width: 1094px;
+
+@mixin mobile {
+  @media (max-width: $mobile-width) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $tablet-width) {
+    @content;
+  }
+}

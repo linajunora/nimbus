@@ -1,11 +1,14 @@
 .btn {
   font-family: var(--font-body);
   font-size: 1rem;
-  padding: 12px 25px;
-  border-radius: 20px;
+  padding: 16px 28px;
+  border-radius: 25px;
   border: none;
   letter-spacing: 2px;
   font-weight: 400;
+
+  cursor: pointer;
+  white-space: nowrap;
 }
 
 .btn-primary {
@@ -22,13 +25,34 @@
   }
 }
 
+.login-btn {
+  padding: 9px 23px;
+}
+
 .btn-secondary {
   background-color: var(--rose500);
   color: var(--blackish500);
+  transition: background-color 0.3s ease-in-out;
+  &:hover {
+    background-color: var(--rose600);
+  }
+  &:active {
+    background-color: var(--rose700);
+    transform: scale(0.98);
+  }
 }
 
 .btn-default-blue {
-  border: 1.45px solid var(--periwinkle500);
-  color: var(--periwinkle500);
+  border: 1.45px solid var(--periwinkle600);
+  color: var(--periwinkle600);
   background-color: var(--whiteish500);
+  &:hover {
+    color: var(--periwinkle700);
+    border: 1.45px solid var(--periwinkle700);
+  }
+  &:active {
+    color: var(--periwinkle800);
+    border: 1.45px solid var(--periwinkle800);
+    transform: scale(0.98);
+  }
 }

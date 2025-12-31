@@ -9,16 +9,25 @@ export default function Home() {
     <div className="home-page">
       <section className="intro-info">
         <div className="box1">
-          <h2>Movies</h2>
-          <h2>Series</h2>
-          <p>Frontend skin for your Jellyfin backend</p>
+          <div className="headlines-div">
+            <div className="h2-div">
+              <h2>Movies</h2>
+              <h2>Series</h2>
+            </div>
+            <p>Frontend skin for your Jellyfin backend</p>
+          </div>
           <div className="intro-info-buttons">
-            <Button onClick={() => navigate("/apply")} variant="secondary">
+            <Button
+              onClick={() => navigate("/apply")}
+              variant="secondary"
+              className="get-started-btn"
+            >
               Get Started
             </Button>
             <Button
               onClick={() => navigate("/read-more")}
               variant="default-blue"
+              className="read-more-btn"
             >
               Read More
             </Button>
