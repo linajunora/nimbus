@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "./Navbar";
+import BottomNav from "./BottomNav";
 
 const Layout = () => {
   return (
@@ -11,6 +12,7 @@ const Layout = () => {
                 den sida man är på. ex Home*/}
         <Outlet />
       </main>
+      <BottomNav />
     </div>
   );
 };

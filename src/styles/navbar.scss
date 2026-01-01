@@ -11,6 +11,9 @@
   @include tablet {
     padding: 10px 4rem;
   }
+  @include mobile {
+    padding: 10px 20px;
+  }
 
   .avatar-div {
     display: flex;
@@ -32,6 +35,10 @@
     align-items: center;
     gap: 40px;
     font-family: var(--font-body);
+
+    @include mobile {
+      display: none;
+    }
 
     a {
       line-height: 24px;

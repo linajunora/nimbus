@@ -56,3 +56,9 @@
     transform: scale(0.98);
   }
 }
+
+.btn-default {
+  background-color: var(--whiteish500);
+  border: 1px solid var(--blackish400);
+  color: var(--blackish400);
+}

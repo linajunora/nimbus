@@ -1,0 +1,87 @@
+@use "./variables" as *;
+
+// 1. BACKDROP STYLING
+.menu-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  //   background-color: rgba(0, 0, 0, 0.1); // Mörktonad bakgrund
+  backdrop-filter: blur(4px);
+  z-index: 899;
+
+  // Animation för backdrop
+  opacity: 0;
+  pointer-events: none; // Klick går igenom när den är osynlig
+  transition: opacity 0.3s ease;
+
+  &.open {
+    opacity: 1;
+    pointer-events: all; // Nu kan man klicka på den för att stänga
+  }
+}
+
+// 2. MENY-KORTET STYLING
+.mobile-menu {
+  position: fixed;
+  left: 50%;
+
+  // Startläge:
+  // X: -50% (centrerad i sidled)
+  // Y: 150% (gömd långt ner under skärmkanten)
+  transform: translate(-50%, 150%);
+
+  // Placering när den är framme (vi justerar detta i &.open)
+  bottom: 100px; // Låt den sväva ovanför din BottomNav
+
+  width: 100%; // Lite bredare än 50% brukar vara snyggare på mobil
+  //   max-width: 300px; // Men inte för bred
+  height: auto; // Låt innehållet styra höjden
+  padding: 40px 20px;
+
+  background-color: var(--whiteish500);
+  border-radius: 30px; // Runda hörn för "kort"-känslan
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2); // Djup skugga
+  z-index: 900;
+
+  display: flex; // OBS: 'flexbox' är inte ett giltigt värde, 'flex' är det!
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  // Animationen
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+  // STATE: OPEN
+  &.open {
+    // HÄR LÖSER VI KONFLIKTEN:
+    // Vi behåller -50% på X, men sätter Y till 0.
+    transform: translate(-50%, 0);
+  }
+
+  .menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+
+    a {
+      text-decoration: none;
+      font-family: var(--font-body);
+      font-size: 1.5rem; // Lite mindre text passar bättre i ett kort
+      font-weight: 600;
+      color: var(--blackish400);
+      transition: all 0.2s;
+
+      &.active {
+        color: var(--periwinkle600);
+      }
+
+      &:hover {
+        color: var(--blackish500);
+        transform: scale(1.05); // Liten förstoring vid hover
+      }
+    }
+  }
+}
